@@ -28,3 +28,9 @@
   (is (= [4 3 2 1] (reverse-list [1 2 3 4])))
   (is (= [1] (reverse-list [1])))
   (is (= [] (reverse-list []))))
+
+(deftest palindrome-test
+  (is (= true (palindrome [2 3 3 2])))
+  (is (= true (palindrome [1])))
+  (is (= true (palindrome [])))
+  (is (= false (palindrome [2 3]))))

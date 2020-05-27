@@ -27,3 +27,6 @@
   (case list
     [] []
     (concat (reverse-list (rest list)) [(first list)])))
+
+(defn palindrome [list]
+  (= list (reverse-list list)))
