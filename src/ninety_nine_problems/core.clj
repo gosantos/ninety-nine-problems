@@ -12,3 +12,8 @@
     1 []
     2 list
     (get-last-two-elements (rest list))))
+
+(defn find-k-element [list k]
+  (case k
+    1 (first list)
+    (find-k-element (rest list) (- k 1))))

@@ -11,3 +11,10 @@
   (is (= [3 4] (get-last-two-elements [1 2 3 4])))
   (is (= [] (get-last-two-elements [1])))
   (is (= [] (get-last-two-elements []))))
+
+(deftest find-element-test
+  (is (= 2 (find-k-element [1 2 3 4] 2)))
+  (is (= 4 (find-k-element [1 2 3 4] 4)))
+  (is (= 1 (find-k-element [1 2 3 4] 1)))
+  (is (= nil (find-k-element [1] 2)))
+  (is (= nil (find-k-element [] 2))))
