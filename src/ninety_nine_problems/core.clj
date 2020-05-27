@@ -30,3 +30,10 @@
 
 (defn palindrome [list]
   (= list (reverse-list list)))
+
+(defn my-flatten [list]
+  (if (empty? list)
+    []
+    (if (vector? (first list))
+      (concat (my-flatten (first list)) (my-flatten (rest list)))
+      (concat (vector (first list)) (my-flatten (rest list))))))

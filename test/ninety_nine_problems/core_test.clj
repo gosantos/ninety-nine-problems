@@ -34,3 +34,10 @@
   (is (= true (palindrome [1])))
   (is (= true (palindrome [])))
   (is (= false (palindrome [2 3]))))
+
+(deftest flat-list-test
+  (is (= [2 3 3 4 5 5 5 5 6 7 2] (my-flatten [2 [3 [3 [[[[4 [5 [5 [5 [[5 6 7]]]]]]]]]]] 2])))
+  (is (= [2 3 3 2] (my-flatten [2 [3 [3]] 2])))
+  (is (= [1] (my-flatten [1])))
+  (is (= [] (my-flatten [])))
+  (is (= [2 3] (my-flatten [2 3]))))
