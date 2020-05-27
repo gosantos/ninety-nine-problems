@@ -22,3 +22,8 @@
   (case list
     [] 0
     (+ 1 (list-size (rest list)))))
+
+(defn reverse-list [list]
+  (case list
+    [] []
+    (concat (reverse-list (rest list)) [(first list)])))

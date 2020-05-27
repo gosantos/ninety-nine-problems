@@ -23,3 +23,8 @@
   (is (= 4 (list-size [1 2 3 4])))
   (is (= 1 (list-size [1])))
   (is (= 0 (list-size []))))
+
+(deftest reverse-list-test
+  (is (= [4 3 2 1] (reverse-list [1 2 3 4])))
+  (is (= [1] (reverse-list [1])))
+  (is (= [] (reverse-list []))))
