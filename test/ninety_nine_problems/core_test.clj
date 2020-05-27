@@ -18,3 +18,8 @@
   (is (= 1 (find-k-element [1 2 3 4] 1)))
   (is (= nil (find-k-element [1] 2)))
   (is (= nil (find-k-element [] 2))))
+
+(deftest list-size-test
+  (is (= 4 (list-size [1 2 3 4])))
+  (is (= 1 (list-size [1])))
+  (is (= 0 (list-size []))))

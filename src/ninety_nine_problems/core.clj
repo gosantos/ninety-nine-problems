@@ -17,3 +17,8 @@
   (case k
     1 (first list)
     (find-k-element (rest list) (- k 1))))
+
+(defn list-size [list]
+  (case list
+    [] 0
+    (+ 1 (list-size (rest list)))))
